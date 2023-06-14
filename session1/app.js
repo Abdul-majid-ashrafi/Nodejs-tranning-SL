@@ -17,7 +17,7 @@ const server = http.createServer((req, res) => {
     if (req.url === "/about") {
         res.end('About page!');
     } else if (req.url === "/gallery") {
-        const filePath = path.join(__dirname, 'index.html');
+        const filePath = path.join(__dirname, 'gallery.html');
         loadAndStream(filePath, 'text/html', res)
     } else {
         const filePath = path.join(__dirname, 'home.html');
